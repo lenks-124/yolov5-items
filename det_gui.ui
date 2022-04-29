@@ -1,0 +1,1390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <author>lenks</author>
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1771</width>
+    <height>1079</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>166666</width>
+    <height>166666</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>工业视觉监测系统ver1.2</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+background-color:#eaeaea;
+}</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox_6">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>120</y>
+     <width>1571</width>
+     <height>751</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QGroupBox{
+border: 2px solid #3e3e3e;
+border-radius:5px;
+margin-top:2ex;
+font-family:微软雅黑;
+font:bold 18px;
+color:#474554;
+}
+QGroupBox::title
+{
+subcontrol-origin:margin;
+subcontrol-position:top right;
+padding:0 3px;
+}</string>
+   </property>
+   <property name="title">
+    <string>检测内容</string>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>651</width>
+      <height>711</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+background-color:#eaeaea;
+}</string>
+    </property>
+    <property name="text">
+     <string>待检测图片</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label2">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>30</y>
+      <width>651</width>
+      <height>711</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+background-color:#eaeaea;
+}</string>
+    </property>
+    <property name="text">
+     <string>图片检测结果</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>1336</x>
+      <y>70</y>
+      <width>221</width>
+      <height>631</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="7" column="1">
+      <widget class="QLabel" name="t8">
+       <property name="maximumSize">
+        <size>
+         <width>70</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+color:red;
+background-color:white;
+border: 2px solid #3e3e3e;
+border-radius:5px;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="label_9">
+       <property name="maximumSize">
+        <size>
+         <width>100</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>检测总数:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_7">
+       <property name="maximumSize">
+        <size>
+         <width>100</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>缺料:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_6">
+       <property name="maximumSize">
+        <size>
+         <width>100</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>俯损伤:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_5">
+       <property name="maximumSize">
+        <size>
+         <width>100</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>侧损伤:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="t2">
+       <property name="maximumSize">
+        <size>
+         <width>70</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+color:red;
+background-color:white;
+border: 2px solid #3e3e3e;
+border-radius:5px;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLabel" name="t6">
+       <property name="maximumSize">
+        <size>
+         <width>70</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+color:red;
+background-color:white;
+border: 2px solid #3e3e3e;
+border-radius:5px;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLabel" name="t5">
+       <property name="maximumSize">
+        <size>
+         <width>70</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+color:red;
+background-color:white;
+border: 2px solid #3e3e3e;
+border-radius:5px;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QLabel" name="t7">
+       <property name="maximumSize">
+        <size>
+         <width>70</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+color:red;
+background-color:white;
+border: 2px solid #3e3e3e;
+border-radius:5px;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="label_8">
+       <property name="maximumSize">
+        <size>
+         <width>100</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>杂质:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="maximumSize">
+        <size>
+         <width>100</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>侧缺料:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="t3">
+       <property name="maximumSize">
+        <size>
+         <width>70</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+color:red;
+background-color:white;
+border: 2px solid #3e3e3e;
+border-radius:5px;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QLabel" name="label_10">
+       <property name="maximumSize">
+        <size>
+         <width>100</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>结果:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="maximumSize">
+        <size>
+         <width>100</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>残留:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLabel" name="t4">
+       <property name="maximumSize">
+        <size>
+         <width>70</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+color:red;
+background-color:white;
+border: 2px solid #3e3e3e;
+border-radius:5px;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="t1">
+       <property name="maximumSize">
+        <size>
+         <width>70</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+color:red;
+background-color:white;
+border: 2px solid #3e3e3e;
+border-radius:5px;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="1">
+      <widget class="QLabel" name="t9">
+       <property name="maximumSize">
+        <size>
+         <width>70</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+color:red;
+background-color:white;
+border: 2px solid #3e3e3e;
+border-radius:5px;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="0">
+      <widget class="QLabel" name="label_11">
+       <property name="maximumSize">
+        <size>
+         <width>100</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>合格率:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="get_image">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>130</y>
+      <width>481</width>
+      <height>481</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PushButton</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="result_img">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>150</y>
+      <width>491</width>
+      <height>481</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PushButton</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="flag">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>110</y>
+      <width>200</width>
+      <height>200</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>400</width>
+      <height>400</height>
+     </size>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+background-color:rgb(22,22,22,0)
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_4">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>600</y>
+     <width>160</width>
+     <height>271</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>160</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QGroupBox{
+border: 2px solid #3e3e3e;
+border-radius:5px;
+margin-top:2ex;
+font-family:微软雅黑;
+font:bold 18px;
+color:#474554;
+}
+QGroupBox::title
+{
+subcontrol-origin:margin;
+subcontrol-position:top right;
+padding:0 3px;
+}</string>
+   </property>
+   <property name="title">
+    <string>批量检测</string>
+   </property>
+   <widget class="QPushButton" name="btn5_1">
+    <property name="geometry">
+     <rect>
+      <x>16</x>
+      <y>110</y>
+      <width>131</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>-1</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+text-align : center;
+ background-color :#3D3A3A;
+ font-family:微软雅黑;
+ border-color: gray;
+ border-width: 0px;
+ border-radius: 4px;
+ padding: 6px;
+ height : 14px;
+ border-style: outset;
+ font : 21px;
+ color:#E7E4E4
+}
+ QPushButton:pressed
+{background-color :#666666;
+ font-family:微软雅黑;
+ border-color: gray;
+ border-width: 0px;
+ border-radius: 4px;
+ padding: 6px;
+ height : 14px;
+ border-style: outset;
+ font : 20px;
+ color:#E7E4E4}
+</string>
+    </property>
+    <property name="text">
+     <string>检测</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn5_2">
+    <property name="geometry">
+     <rect>
+      <x>16</x>
+      <y>30</y>
+      <width>131</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>-1</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+text-align : center;
+ background-color :#3D3A3A;
+ font-family:微软雅黑;
+ border-color: gray;
+ border-width: 0px;
+ border-radius: 4px;
+ padding: 6px;
+ height : 14px;
+ border-style: outset;
+ font : 21px;
+ color:#E7E4E4
+}
+ QPushButton:pressed
+{background-color :#666666;
+ font-family:微软雅黑;
+ border-color: gray;
+ border-width: 0px;
+ border-radius: 4px;
+ padding: 6px;
+ height : 14px;
+ border-style: outset;
+ font : 20px;
+ color:#E7E4E4}
+</string>
+    </property>
+    <property name="text">
+     <string>选择目录</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn5_3">
+    <property name="geometry">
+     <rect>
+      <x>16</x>
+      <y>190</y>
+      <width>131</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>-1</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+text-align : center;
+ background-color :#3D3A3A;
+ font-family:微软雅黑;
+ border-color: gray;
+ border-width: 0px;
+ border-radius: 4px;
+ padding: 6px;
+ height : 14px;
+ border-style: outset;
+ font : 21px;
+ color:#E7E4E4
+}
+ QPushButton:pressed
+{background-color :#666666;
+ font-family:微软雅黑;
+ border-color: gray;
+ border-width: 0px;
+ border-radius: 4px;
+ padding: 6px;
+ height : 14px;
+ border-style: outset;
+ font : 20px;
+ color:#E7E4E4}
+</string>
+    </property>
+    <property name="text">
+     <string>资源显示</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_3">
+   <property name="geometry">
+    <rect>
+     <x>13</x>
+     <y>123</y>
+     <width>160</width>
+     <height>190</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>160</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QGroupBox{
+border: 2px solid #3e3e3e;
+border-radius:5px;
+margin-top:2ex;
+font-family:微软雅黑;
+font:bold 18px;
+color:#474554;
+}
+QGroupBox::title
+{
+subcontrol-origin:margin;
+subcontrol-position:top right;
+padding:0 3px;
+}</string>
+   </property>
+   <property name="title">
+    <string>模式选项</string>
+   </property>
+   <widget class="QComboBox" name="comboBox4">
+    <property name="geometry">
+     <rect>
+      <x>16</x>
+      <y>40</y>
+      <width>131</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"> text-align : center;
+ background-color :#3D3A3A;
+ font: bold;
+ font-family:微软雅黑;
+ border-color: gray;
+ border-width: 0px;
+ border-radius: 4px;
+ padding: 6px;
+ height : 14px;
+ border-style: outset;
+ font : 21px;
+ color:#E7E4E4
+</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>  检测模式</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>  评估模式</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="btn4_1">
+    <property name="geometry">
+     <rect>
+      <x>16</x>
+      <y>120</y>
+      <width>131</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>-1</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+text-align : center;
+ background-color :#3D3A3A;
+ font-family:微软雅黑;
+ border-color: gray;
+ border-width: 0px;
+ border-radius: 4px;
+ padding: 6px;
+ height : 14px;
+ border-style: outset;
+ font : 21px;
+ color:#E7E4E4
+}
+ QPushButton:pressed
+{background-color :#666666;
+ font-family:微软雅黑;
+ border-color: gray;
+ border-width: 0px;
+ border-radius: 4px;
+ padding: 6px;
+ height : 14px;
+ border-style: outset;
+ font : 20px;
+ color:#E7E4E4}
+</string>
+    </property>
+    <property name="text">
+     <string>模式切换</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>320</y>
+     <width>160</width>
+     <height>271</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>160</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QGroupBox{
+border: 2px solid #3e3e3e;
+border-radius:5px;
+margin-top:2ex;
+font-family:微软雅黑;
+font:bold 18px;
+color:#474554;
+}
+QGroupBox::title
+{
+subcontrol-origin:margin;
+subcontrol-position:top right;
+padding:0 3px;
+}</string>
+   </property>
+   <property name="title">
+    <string>图片检测</string>
+   </property>
+   <widget class="QPushButton" name="btn1_1">
+    <property name="geometry">
+     <rect>
+      <x>16</x>
+      <y>30</y>
+      <width>131</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>-1</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+text-align : center;
+ background-color :#3D3A3A;
+ font-family:微软雅黑;
+ border-color: gray;
+ border-width: 0px;
+ border-radius: 4px;
+ padding: 6px;
+ height : 14px;
+ border-style: outset;
+ font : 21px;
+ color:#E7E4E4
+}
+ QPushButton:pressed
+{background-color :#666666;
+ font-family:微软雅黑;
+ border-color: gray;
+ border-width: 0px;
+ border-radius: 4px;
+ padding: 6px;
+ height : 14px;
+ border-style: outset;
+ font : 20px;
+ color:#E7E4E4}
+</string>
+    </property>
+    <property name="text">
+     <string>选择图片</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn1_2">
+    <property name="geometry">
+     <rect>
+      <x>16</x>
+      <y>110</y>
+      <width>131</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>-1</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+text-align : center;
+ background-color :#3D3A3A;
+ font-family:微软雅黑;
+ border-color: gray;
+ border-width: 0px;
+ border-radius: 4px;
+ padding: 6px;
+ height : 14px;
+ border-style: outset;
+ font : 21px;
+ color:#E7E4E4
+}
+ QPushButton:pressed
+{background-color :#666666;
+ font-family:微软雅黑;
+ border-color: gray;
+ border-width: 0px;
+ border-radius: 4px;
+ padding: 6px;
+ height : 14px;
+ border-style: outset;
+ font : 20px;
+ color:#E7E4E4}
+</string>
+    </property>
+    <property name="text">
+     <string>检测图片</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn1_3">
+    <property name="geometry">
+     <rect>
+      <x>16</x>
+      <y>190</y>
+      <width>131</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>-1</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+text-align : center;
+ background-color :#3D3A3A;
+ font-family:微软雅黑;
+ border-color: gray;
+ border-width: 0px;
+ border-radius: 4px;
+ padding: 6px;
+ height : 14px;
+ border-style: outset;
+ font : 21px;
+ color:#E7E4E4
+}
+ QPushButton:pressed
+{background-color :#666666;
+ font-family:微软雅黑;
+ border-color: gray;
+ border-width: 0px;
+ border-radius: 4px;
+ padding: 6px;
+ height : 14px;
+ border-style: outset;
+ font : 20px;
+ color:#E7E4E4}
+</string>
+    </property>
+    <property name="text">
+     <string>保存查看</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_7">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>880</y>
+     <width>1741</width>
+     <height>183</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QGroupBox{
+border: 2px solid #3e3e3e;
+border-radius:5px;
+margin-top:2ex;
+font-family:微软雅黑;
+font:bold 18px;
+color:#474554;
+
+}
+QGroupBox::title
+{
+subcontrol-origin:margin;
+subcontrol-position:top right;
+padding:0 3px;
+}</string>
+   </property>
+   <property name="title">
+    <string>日志记录</string>
+   </property>
+   <widget class="QTextBrowser" name="tps">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>1711</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextBrowser{
+border:0px;
+font-family:微软雅黑;
+font:bold 18px;
+color:#4A708B;
+background-color:#F1F1F1
+}
+</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>1731</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>幼圆</family>
+     <pointsize>26</pointsize>
+     <weight>75</weight>
+     <italic>false</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+border: 2px solid #3d3a3a;
+border-radius:5px;
+color:#eaeaea;
+background-color:#3d3a3a;
+}</string>
+   </property>
+   <property name="text">
+    <string>工 业 视 觉 监 测 系 统</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::AutoText</enum>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_12">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>16</y>
+     <width>100</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+border-radius:20px;
+background-color:#eaeaea;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_13">
+   <property name="geometry">
+    <rect>
+     <x>1490</x>
+     <y>94</y>
+     <width>261</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>幼圆</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+border-bottom:5px solid qlineargradient(y0:0, y1:1,stop: 0 white, stop: 1  #3d3a3a);
+border-right:2px solid ;
+background-color:#eaeaea;
+}</string>
+   </property>
+   <property name="text">
+    <string>视觉实验室  version:1.2</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="utils/123.qrc"/>
+ </resources>
+ <connections/>
+</ui>
