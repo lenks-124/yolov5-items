@@ -38,7 +38,7 @@ from utils.torch_utils import select_device, time_sync
 
 
 @torch.no_grad()
-def run(weights=ROOT / 'v5l_last.pt',  # model.pt path(s)
+def run(weights=ROOT / 'last.pt',  # model.pt path(s)
         source=r'D:\DeepLearning\projects\Item_YOLO\data\images\2.jpg',  # file/dir/URL/glob, 0 for webcam
         data=ROOT / 'models/guanliu.yaml',  # dataset.yaml path
         imgsz=(640, 640),  # inference size (height, width)
@@ -65,6 +65,7 @@ def run(weights=ROOT / 'v5l_last.pt',  # model.pt path(s)
         half=False,  # use FP16 half-precision inference
         dnn=False,  # use OpenCV DNN for ONNX inference
         ):
+    print("开始调用检测函数")
     ans = {}
     source = str(source)
     save_img = not nosave and not source.endswith('.txt')  # save inference images
@@ -75,16 +76,20 @@ def run(weights=ROOT / 'v5l_last.pt',  # model.pt path(s)
         source = check_file(source)  # download
 
     # Directories  -------------------添加save_dir_base--------------
+    print("1")
     save_dir = increment_path(Path(project) / name, exist_ok=exist_ok)  # increment run
     ans['save_dir_base'] = save_dir
     (save_dir / 'labels' if save_txt else save_dir).mkdir(parents=True, exist_ok=True)  # make dir
 
     # Load model
+    print("2")
     device = select_device(device)
+    print("2..")
     model = DetectMultiBackend(weights, device=device, dnn=dnn, data=data, fp16=half)
+    print("2.555.")
     stride, names, pt = model.stride, model.names, model.pt
     imgsz = check_img_size(imgsz, s=stride)  # check image size
-
+    print("5")
     # Dataloader
     if webcam:
         view_img = check_imshow()
@@ -95,7 +100,7 @@ def run(weights=ROOT / 'v5l_last.pt',  # model.pt path(s)
         dataset = LoadImages(source, img_size=imgsz, stride=stride, auto=pt)
         bs = 1  # batch_size
     vid_path, vid_writer = [None] * bs, [None] * bs
-
+    print("3")
     # Run inference
     model.warmup(imgsz=(1 if pt else bs, 3, *imgsz))  # warmup
     dt, seen = [0.0, 0.0, 0.0], 0
@@ -106,7 +111,7 @@ def run(weights=ROOT / 'v5l_last.pt',  # model.pt path(s)
     vid_cap : none
     s : 'image 1/4 D:\\DeepLearning\\projects\\Item_YOLO\\data\\images\\10.jpg: ' 就是后面要打印的东西
     """
-    res = np.array([0, 0, 0, 0, 0, 0, 0, 0, 0,0,0])  # 用来存放需要返回的结果, 每个元素对应相应的label的值--------------------
+    res = np.array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])  # 用来存放需要返回的结果, 每个元素对应相应的label的值--------------------
     # 前6个 代表缺陷的个数，6 7 索引代表yes，no 个数
     for path, im, im0s, vid_cap, s in dataset:
         t1 = time_sync()
